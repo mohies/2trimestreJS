@@ -16,7 +16,7 @@ function acceder() {
 
     let lis = [...document.getElementsByTagName("li")];
 
-    let bmw = lis.find((item) => item.firstChild.textContent == "BMW")
+    let bmw = lis.find((item) => item.textContent == "BMW")
 
     document.getElementsByTagName("ul")[0].insertBefore(li, bmw)
 
