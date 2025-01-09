@@ -9,6 +9,7 @@ function inicializar() {
     const y = event.clientY; // Coordenada Y del ratón
 
     // Establecemos la nueva posición del div para que persiga el ratón
+    perseguidor.style.position= 'absolute';
     perseguidor.style.left = `${x}px`; 
     perseguidor.style.top = `${y}px`;  
   });

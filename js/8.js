@@ -4,8 +4,7 @@ function inicializar() {
     mostrarDatos();
 }
 
-const datos = [
-    {
+const datos = [{
         "src": "/img/img1.jpg",
         "desc": "descripcion1",
         "specs": ["spec11", "spec12"]
@@ -24,7 +23,7 @@ function mostrarDatos() {
         // Crear un div contenedor para cada item
         const divItem = document.createElement("div");
         divItem.classList.add("item");
- 
+
 
         // Crear la imagen
         const img = document.createElement("img");
@@ -40,7 +39,7 @@ function mostrarDatos() {
         // Crear la lista de especificaciones
         const lista = document.createElement("ul");
         lista.classList.add("especificaciones");
-        lista.style.display = "none";  // Inicialmente oculto
+        lista.style.display = "none"; // Inicialmente oculto
 
         item.specs.forEach(sp => {
             const uli = document.createElement("li");
@@ -68,9 +67,9 @@ function mostrarocultar(event) {
     // Alternar la visibilidad de la lista y la descripción
     if (lista.style.display === "none") {
         lista.style.display = "block";
-        desc.style.display = "block";  // También mostrar la descripción si está oculta
+        desc.style.display = "block"; // También mostrar la descripción si está oculta
     } else {
         lista.style.display = "none";
-        desc.style.display = "none";  // Ocultar la descripción también
+        desc.style.display = "none"; // Ocultar la descripción también
     }
 }
