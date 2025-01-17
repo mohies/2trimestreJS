@@ -60,7 +60,7 @@
         enlace2.addEventListener('click', function(event) {
             event.preventDefault();  // Evitar la acción por defecto del enlace
 
-            // Acceder al contenido del iframe
+            // Acceder al contenido del iframe no se puede quitar si se quita no se puede ocultar
             const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
 
             // Obtener la tabla por su id (suponiendo que tiene un id="miTabla" en 5.html)
@@ -73,12 +73,6 @@
                 tabla.style.display = 'none';  // Ocultar la tabla
             }
         });
-
-        
-
-
-
-
 
 
     </script>

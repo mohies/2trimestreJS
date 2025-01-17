@@ -14,8 +14,8 @@ function inicializar() {
       const y = event.clientY;
 
       // Establecer la posición de la capa donde se hizo clic
-      capa.style.left = `${x + 10}px`;  // 10px de margen para que no se solape con el clic
-      capa.style.top = `${y + 10}px`;   // 10px de margen para que no se solape con el clic
+      capa.style.left = `${x}px`;  // 10px de margen para que no se solape con el clic
+      capa.style.top = `${y}px`;   // 10px de margen para que no se solape con el clic
 
       // Mostrar la capa con las coordenadas
       capa.style.display = 'block';

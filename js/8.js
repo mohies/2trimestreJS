@@ -48,7 +48,9 @@ function mostrarDatos() {
         });
 
         // Añadir el evento de mostrar/ocultar cuando se haga clic en la imagen
-        img.addEventListener("click", mostrarocultar);
+        img.addEventListener("click", function () {
+            mostrarocultar(lista, desc);  // Pasamos los elementos correctos a la función
+        });
 
         // Añadir los elementos al contenedor del item
         divItem.appendChild(img);
@@ -58,18 +60,15 @@ function mostrarDatos() {
     });
 }
 
-function mostrarocultar(event) {
-    // Encontrar el contenedor del item al que pertenece la imagen
-    const divItem = event.target.closest(".item");
-    const lista = divItem.querySelector(".especificaciones");
-    const desc = divItem.querySelector(".descripcion");
+function mostrarocultar(uli,desc) {
+
 
     // Alternar la visibilidad de la lista y la descripción
-    if (lista.style.display === "none") {
-        lista.style.display = "block";
+    if (uli.style.display === "none") {
+        uli.style.display = "block";
         desc.style.display = "block"; // También mostrar la descripción si está oculta
     } else {
-        lista.style.display = "none";
+        uli.style.display = "none";
         desc.style.display = "none"; // Ocultar la descripción también
     }
 }
